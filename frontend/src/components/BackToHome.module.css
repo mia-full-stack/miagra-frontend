@@ -1,0 +1,76 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0;
+    border-bottom: 1px solid #dbdbdb;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin-bottom: 20px;
+}
+
+.backButton,
+.homeButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: none;
+    background: none;
+    color: #262626;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.backButton:hover,
+.homeButton:hover {
+    background-color: #f5f5f5;
+    color: #0095f6;
+}
+
+.homeButton {
+    color: #0095f6;
+}
+
+.homeButton:hover {
+    background-color: rgba(0, 149, 246, 0.1);
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 12px 0;
+        gap: 8px;
+    }
+
+    .backButton,
+    .homeButton {
+        padding: 8px 12px;
+        gap: 6px;
+    }
+
+    .text {
+        display: none;
+    }
+
+    .icon {
+        width: 18px;
+        height: 18px;
+    }
+}

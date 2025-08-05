@@ -1,0 +1,191 @@
+.container {
+    max-width: 470px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.feed {
+    max-width: 470px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 20px;
+}
+
+.spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #405de6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 16px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 8px;
+    height: 200px;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.error {
+    background: white;
+    border: 1px solid #ed4956;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.error h3 {
+    color: #ed4956;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+.error p {
+    color: #8e8e8e;
+    font-size: 14px;
+    margin: 0 0 16px 0;
+}
+
+.retryButton {
+    background: #405de6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.retryButton:hover {
+    background: #3651e3;
+}
+
+.postsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.empty {
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.emptyTitle {
+    color: #262626;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+.emptyText {
+    color: #8e8e8e;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.noPosts {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #dbdbdb;
+}
+
+.noPosts h3 {
+    color: #262626;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.noPosts p {
+    color: #8e8e8e;
+    font-size: 14px;
+}
+
+.loginPrompt {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #dbdbdb;
+}
+
+.loginPrompt h2 {
+    color: #262626;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.loginPrompt p {
+    color: #8e8e8e;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .feed {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .loginPrompt,
+    .loading,
+    .error,
+    .noPosts {
+        margin: 0 10px;
+    }
+
+    .skeleton {
+        height: 150px;
+    }
+}

@@ -1,0 +1,44 @@
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.container {
+    padding: 24px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.link {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: var(--grey-text-color);
+    white-space: nowrap;
+}
+
+.link:hover {
+    color: var(--second-text-color);
+}
+
+.divCopyP {
+    margin-top: 48px;
+    margin-bottom: 36px;
+}
+
+.copyP {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: var(--grey-text-color);
+    white-space: nowrap;
+    text-align: center;
+}
